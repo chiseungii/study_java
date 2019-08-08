@@ -1,0 +1,26 @@
+public class Main {
+	
+	public static void main(String[] args) {
+		String a = new String(" abcd");
+		String b = new String(",efg");
+		
+		a = a.concat(b);	// 문자열 연결
+		System.out.println(a);	// " abcd,efg"
+		
+		a = a.trim();	// 공백 제거
+		System.out.println(a);	// "abcd,efg"
+		
+		a = a.replace("ab", "12");	// 문자열 대치
+		System.out.println(a);	// "12cd,efg"
+		
+		String s[] = a.split(",");	// 문자열 분리
+		for(int i=0; i<s.length; i++)
+			System.out.println("분리된 " + i + "번 문자열: " + s[i]);
+		
+		a = a.substring(3);
+		System.out.println(a);	// "d,efg"
+		
+		char c = a.charAt(2);
+		System.out.println(c);	// "e"
+	}	
+}
